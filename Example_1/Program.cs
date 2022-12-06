@@ -14,21 +14,23 @@ while (!isParsed)
     }
 }
 
-int InvertDigitPosition(int number)
+ItsPalindrome(num);
+
+int InvertDigitPosition(int number, int numDigit)
 {
     int newNumber = 0;
-    for (int i = 4; i >= 0; i--)
+    for (int i = numDigit - 1; i >= 0; i--)
     {
-        newNumber = newNumber + (number % 10)*(int)Math.Pow(10,(double)i);
+        newNumber = newNumber + (number % 10) * (int)Math.Pow(10, (double)i);
         number /= 10;
     }
     return newNumber;
-     
+
 }
 
 void ItsPalindrome(int x)
 {
-    if(x == InvertDigitPosition(x))
+    if (x == InvertDigitPosition(x, 5))
     {
         Console.WriteLine("Это полиндром");
     }
@@ -38,4 +40,3 @@ void ItsPalindrome(int x)
     }
 }
 
-ItsPalindrome(num);
